@@ -1,0 +1,27 @@
+body {
+	background-color: navy;
+	color: white;
+	font-family: courier;
+}
+
+a:link {
+	color: #FFAAFF;
+}
+
+a:visited {
+	color: aqua;
+}
+
+.panel {
+	background-color: #0f0fa0;
+	border-style: none;
+	border-radius: 7px;
+	padding: 10px;
+	color: ffccdd;
+	width:90%;
+	margin: auto;
+}
+
+.headerPanel {
+
+}
