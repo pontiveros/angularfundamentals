@@ -7,7 +7,20 @@
 	</head>
 	<body>
 		ToDo List:
-		<div ng-controler="myController" >
+		<div ng-controller="myController">
+			<span>{{remaining()}} of {{todoList.length}} remaining </span>
+
+			<ul class="unstyled">
+				<li ng-repeat="item in todoList">
+					<input type="checkbox" ng-model="item.done">
+					<span class="done-{{item.done}}">{{item.text}}</span>
+				</li>
+			</ul>
+
+			<form ng-submit="addTodo()">
+				<input type="text" ng-model="todoText" placeholder="todo here...">
+				<input type="submit" value="add ToDo"> 
+			</form>
 		</div>
 	</body>
 </html>
