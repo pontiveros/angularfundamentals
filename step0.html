@@ -1,0 +1,35 @@
+<html ng-app>
+	<head>
+		<title>Angular Fundamentals</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="./angular-1.2.22/angular.js"></script>
+		<script type="text/javascript" src="./step0.js"></script>
+	</head>
+	<body>
+		Understanding javascript scope and this object.
+
+		<script type="text/javascript">
+			
+			var globalVariable = 'Hello top level';
+
+			var method1 = function() {
+
+				var method_inner1 = function () {
+					console.log(this);
+				}
+
+				method_inner1();
+				console.log(globalVariable);
+				console.log(this);
+			};
+
+			method1();
+			console.log(globalVariable);
+			console.log(this);
+
+		</script>
+		<script type="text/javascript">
+			globalScope();
+		</script>
+	</body>
+</html>
