@@ -22,10 +22,11 @@ app.controller("pilotController", ['$scope', function ($scope) {
 app.controller("ordersController", function($scope) {
 	// document.write("Hello Pedro Ontiveros");
 	// $scope.customerId = 5;
+	// https://www.googleapis.com/oauth2/v1/tokeninfo?access_token="my_token"
 });
 
 app.controller("customerController", function($scope) {
-	$scope.placeholderCustom = "Puta madre...";
+	$scope.placeholderCustom = "Filter here...";
 	$scope.customers = [
 		{"id":1, "name":"Buenos Aires", "total":52.636}, 
 		{"id":2, "name":"Santa Fe", "total":32.660}, 

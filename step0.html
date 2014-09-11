@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="theApp">
 	<head>
 		<title>Angular Fundamentals</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -6,30 +6,40 @@
 		<script type="text/javascript" src="./step0.js"></script>
 	</head>
 	<body>
-		Understanding javascript scope and this object.
+		
+		<div class="panel">
+			Understanding javascript scope and this object.
 
-		<script type="text/javascript">
-			
-			var globalVariable = 'Hello top level';
+			<script type="text/javascript">
+				
+				var globalVariable = 'Hello top level';
 
-			var method1 = function() {
+				var method1 = function() {
 
-				var method_inner1 = function () {
+					var method_inner1 = function () {
+						console.log(this);
+					}
+
+					method_inner1();
+					console.log(globalVariable);
 					console.log(this);
-				}
+				};
 
-				method_inner1();
+				method1();
 				console.log(globalVariable);
 				console.log(this);
-			};
 
-			method1();
-			console.log(globalVariable);
-			console.log(this);
-
-		</script>
-		<script type="text/javascript">
-			globalScope();
-		</script>
+			</script>
+			<script type="text/javascript">
+				globalScope();
+			</script>
+		</div> 
+	
+		<br>
+		<div class="panel" ng-controller="myController">
+			<div ng-repeat="item in items">
+				{{item}}
+			</div>
+		</div>
 	</body>
 </html>

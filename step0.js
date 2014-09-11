@@ -1,4 +1,5 @@
 
+
 var globalScope = function() {
 	console.log('Global function it belong to window object.');
 
@@ -20,8 +21,6 @@ var globalScope = function() {
 
 	method_1();
 };
-
-
 
 // How to declare a class in javascript, there is another ways too.
 function Entity (value) {
@@ -73,3 +72,10 @@ var add = (function () {
 add();
 add();
 add();
+
+/******* AngularJS *******/
+
+angular.module('theApp', [])
+	.controller('myController', ['$scope', function($scope) {
+		$scope.items = ['item 1','item 2','item 3','item 4'];
+	}]);
