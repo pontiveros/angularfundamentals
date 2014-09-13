@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="Application03">
 	<head>
 		<title>Angular Fundamentals - Step 3</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -6,6 +6,22 @@
 		<script type="text/javascript" src="./step3.js"></script>
 	</head>
 	<body>
-		
+		<!-- Controller Sample -->
+		<div class="panel" ng-controller="dioneController">
+			<span ng-repeat="item in items">{{item}}<br></span>
+		</div>
+		<br>
+		<div class="panel" ng-controller="inputWatchController">
+			Simple Watcher
+			<br>
+			<input type="text" ng-model="sniffInput">
+		</div>
+		<br>
+		<!-- Directive Sample and Controller. -->
+		<div class="panel">
+			Simple Directive: 
+			<br>
+			<div dioneDirective></div>
+		</div>
 	</body>
 </html>

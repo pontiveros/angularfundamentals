@@ -1,30 +1,23 @@
 
-var program = function() {
+var app = angular.module('Application03', []);
 
-	console.log('init program...');
+app.controller('dioneController', ['$scope', function($scope) {
+	$scope.items = ['General Dynamics', 'Mc Donnell Douglas', 'Dessault Breguet', 'Boeing Vertol', 'Bell Textron'];
+}]);
 
-
-	// Self invocation...
-	(function() {
-		console.log('running anonymous function - closure.');
-	})();
-
-	var add = (function() {
-		var counter = 0;
-		return function() {
-			return counter++; 
+app.controller('inputWatchController', ['$scope', function($scope) {
+	$scope.$watch('sniffInput', function(value) {
+		if (value && value.length > 0) {
+			if (value > 100) {
+				alert('Value cannot be bigger than 100.'); 
+			}
 		}
-	})();
+	});
+}]);
 
-	console.log(add());
-	console.log(add());
-	console.log(add());
+app.directive('dioneDirective', function() {
+	return {
+		template: '<div>Hello Pedro Ontiveros.</div>'
+	};
+});
 
-	console.log('end of program.');
-
-}
-
-program();
-
-// http://jsfiddle.net/fegu/qGFZ6/ 
-// http://localhost:3000/?nativeMode=shell&os=ios
