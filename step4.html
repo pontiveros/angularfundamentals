@@ -1,0 +1,38 @@
+<html ng-app="Application4">
+	<head>
+		<title>Angular Fundamentals</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="./angular-1.2.22/angular.js"></script>
+		<style type="text/css">
+			#testPanel {
+		        background: #dddddd;
+		    }
+		    #testPanel:active, #testPanel.active {
+		        background: #aaaaaa;
+		    }
+		</style>
+	</head>
+	<body>
+		<div class="panel" id="idPanel" style="padding:100px;" onclick="onClickPanel()" ontouchstart="onMouseDown()" ontouchend="onMouseUp()">
+			Hello world!
+		</div>
+
+		<script type="text/javascript">
+
+			function onClickPanel() {
+				console.log('Here is working...');
+			}
+
+			function onMouseDown() {
+				var panel = document.getElementById('idPanel');
+				panel.style.background = '#ff0000';
+			}
+
+			function onMouseUp() {
+				var panel = document.getElementById('idPanel');
+				panel.style.background = '#0000ff';
+			}
+
+		</script>
+	</body>
+</html>
